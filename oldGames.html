@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Retro Gaming Shopping Products</title>
+        <link rel="stylesheet" href="innerPage.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- User Account Links -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="useraccount.css">  
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <div class="navcontainer" style="z-index: 999;">
+         <header>
+             <a href="mainPageUser.html"><img class="logo" src="https://cdn.desertcart.com/static/media/logo.5821c90d.png" alt=""></a>
+             <button id="explore">Explore</button>
+             <nav>
+                 <ul class="nav_links">
+                     <li><a class="anchoricon" href="#"><i class="fal fa-globe"></i></a></li>
+                     <li><button class="usericon" id="usericon1"><i class="fal fa-user"></i>
+                         <div id="content"></div>
+                         </button>
+                     </li>
+                     <li><a class="anchoricon" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                 </ul>
+             </nav>
+         </header>
+         <hr>
+       </div>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+               <option value="0">Any delivery time</option>
+               <option value="1"> Same Day </option>
+               <option value="2"> 2 days </option>
+               <option value="4"> 3-5 days </option>
+               <option value="6"> 5-8days </option>
+               <option value="10"> 9-15days</option>
+               <option value="16"> 15+ days </option>
+           </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Retro Gaming Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "Ultimate Retropie 256GB Raspberry Pi 4 Retro Gaming Console Complete Build 50+ Consoles",
+           brand : "by Retropie",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIA",
+           MRP :  "37,589",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/714uUfm8wfL.jpg" 
+        },{
+           name : "JAFATOY Retro Handheld Games Console for Kids/Adults, 168 Classic Games 8 Bit Games 3 inch Screen Video Games with AV Cable Play on TV (Yellow)",
+           brand : "by JAFATOY",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIB",
+           MRP :  " 5,379",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://images-na.ssl-images-amazon.com/images/I/71YE5gsR9HL.SS150.jpg" 
+        },{
+           name : "Kinhank Super Console X Pro,Retro Video Game Consoles,Built in 50,000+ Games,54+ Emulators for 4K TV HD/AV Output,with Dual Wireless 2.4G Controllers Gamepads,Support WiFi/LAN (Pro 256G)",
+           brand : "by Kinhank",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIC",
+           MRP :  "19,909",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61HfBIQcJpS.jpg" 
+        },{
+           name : "RG351V Handheld Game Console 3.5 Inch Portable Double TF 64G Card Handheld Retro Video Game Two-Player Battle Soulja Boy WIFI Game Console(Black)",
+           brand : "by RG351V",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AID",
+           MRP :  "26,309",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61Qv+btOx9L.jpg" 
+        },{
+           name : "Retroid Pocket 2 Android Handheld Game Console, Dual Boot for Android and retro game console Multiple Emulators Console Handheld 3.5 Inch Display 4000mAh Battery Retro Gaming System for Kids (RS2)",
+           brand : "by Retroid",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIE",
+           MRP :  "19,279",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71eCg5zDl3L.jpg" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIF",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIG",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIH",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AII",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIJ",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIK",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIL",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIM",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIN",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIO",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIP",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIQ",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIR",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIS",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },{
+           name : "",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AIT",
+           MRP :  "",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "" 
+        },
+    ]
+
+
+</script>
+<script src="forAll.js"></script>

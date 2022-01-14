@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Summer Dresses For Women Products</title>
+        <link rel="stylesheet" href="innerPage.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- User Account Links -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="useraccount.css">  
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <div class="navcontainer" style="z-index: 999;">
+         <header>
+             <a href="mainPageUser.html"><img class="logo" src="https://cdn.desertcart.com/static/media/logo.5821c90d.png" alt=""></a>
+             <button id="explore">Explore</button>
+             <nav>
+                 <ul class="nav_links">
+                     <li><a class="anchoricon" href="#"><i class="fal fa-globe"></i></a></li>
+                     <li><button class="usericon" id="usericon1"><i class="fal fa-user"></i>
+                         <div id="content"></div>
+                         </button>
+                     </li>
+                     <li><a class="anchoricon" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                 </ul>
+             </nav>
+         </header>
+         <hr>
+       </div>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+               <option value="0">Any delivery time</option>
+               <option value="1"> Same Day </option>
+               <option value="2"> 2 days </option>
+               <option value="4"> 3-5 days </option>
+               <option value="6"> 5-8days </option>
+               <option value="10"> 9-15days</option>
+               <option value="16"> 15+ days </option>
+           </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Summer Dresses For Women Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "ANRABESS Women's Casual Loose Sundress Long Dress Sleeveless Split Maxi Dresses Summer Beach Dress with Pockets",
+           brand : "by ANRABESS",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKA",
+           MRP :  "5,189",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/51sVinVyoJL.jpg" 
+        },{
+           name : "Women's Boho Floral Print Off Shoulder Split Long A Line Dress",
+           brand : "by Floreans",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKB",
+           MRP :  "5,539",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81Han764TKL.jpg" 
+        },{
+           name : "Women's Short Sleeve Crew Neck T Shirt Dress Tie Waist Ruched Bodycon Mini Dress",
+           brand : "by Meero",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKC",
+           MRP :  "7,849",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61ZaWYUFEjL.jpg" 
+        },{
+           name : "ZAFUL Women's Ditsy Floral Cross Back Cami Mini Dress Ruched Tie Frilled Dress",
+           brand : "by ZAFUL",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKD",
+           MRP :  "6,029",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71z5GmShATS.jpg" 
+        },{
+           name : "Summer Dresses for Women Spaghetti Strap Floral V Neck Beach Dress Midi Sundress",
+           brand : "",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKE",
+           MRP :  "3,599",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61VHJL-+FgS.jpg" 
+        },{
+           name : "Dokuritu Women's Beach Crochet Lace Maxi Dress Summer Spaghetti Strap Maxi Dress",
+           brand : "by Dokuritu",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKF",
+           MRP :  " 5,379",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71QiwI8Mh9S.jpg" 
+        },{
+           name : "Women's Beach Crochet Lace Maxi Dress Summer Spaghetti Strap Maxi Dress",
+           brand : "by Dokuritu",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKG",
+           MRP :  "5,379",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71QiwI8Mh9S.jpg" 
+        },{
+           name : "Women's Stylish Kimono Cardigan with Pom-pom, Loose Sleeveless Beach Cover Up, Fashion Swimwear Cover for 2021 Spring Summer.",
+           brand : "by Kimono",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKH",
+           MRP :  "2,239",   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71AhoYSObJL.jpg" 
+        },{
+           name : "Womens Fashion Floral Print Swimsuit Casual Cardigan Loose Beach skirt Cover Up",
+           brand : "by Floral",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKI",
+           MRP :  "2,229",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71I-entzUVL.jpg" 
+        },{
+           name : "Women Maxi Solid Sleeveless Long Backless Dress Evening Party Beach Dress",
+           brand : "by Starryflashing",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKJ",
+           MRP :  "2,199",   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/51iZk2E3FgL.jpg" 
+        },{
+           name : "women's Fashion Floral Printed Summer Maxi Dresses",
+           brand : "by Floral",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKK",
+           MRP :  "4,229",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61YWUMllBDL.jpg" 
+        },{
+           name : "Nightwear Lingerie Dress Women sexy Night Dress Ladies Summer Crotchless Lingerie Nightdress Pajamas for Women Silk Green",
+           brand : "by vINMASS",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKL",
+           MRP :  "2,809",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/712o7kg6joL.jpg" 
+        },{
+           name : "MAI&FUN Women Maxi Dress Summer Casual A Line Dress Floral Print Polka Dot",
+           brand : "by MAI&FUN",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKM",
+           MRP :  " 1,969",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/7115j+wBesL.jpg" 
+        },{
+           name : "Women's Floral Fashion A-line Summer Casual Maxi Dress",
+           brand : "by ghik",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKN",
+           MRP :  "4,689",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/51ejaSIeNAL.jpg" 
+        },{
+           name : "Women's A-Line Long Sleeve Summer Fashion Floral Printed V Neck Swing Long Dresses",
+           brand : "by FRDAYN",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKO",
+           MRP :  "4,229",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61SNqwswAKS.jpg" 
+        },{
+           name : "MAI&FUN Short Sleeve V-Neck Dress Women's Long Dress Summer Ladies Floral Printed Maxi Dress Multicolour",
+           brand : "by MAI&FUN",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKP",
+           MRP :  " 2,419",   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71dzgrQQwmL.jpg" 
+        },{
+           name : "Women's Tea Length Dress and Jacket (Petite and Regular Sizes)",
+           brand : "by Alex",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKQ",
+           MRP :  "40,439",   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "5-9 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/81jVh4QTRLL.jpg" 
+        },{
+           name : "KIRUNDO Women’s Summer Dress Sleeveless Ruffle Sleeve Round Neck Mini Dress Solid Color Loose Fit Short Flowy Pleated Dress",
+           brand : "by KIRUNDO",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKR",
+           MRP :  "7,239",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://images-na.ssl-images-amazon.com/images/I/613C9Cz9DvL.SS150.jpg" 
+        },{
+           name : "Women Denim Shirt Dresses Short Sleeve Distressed Jean Dress Button Down Casual Tunic Top",
+           brand : "by Zilcema",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKS",
+           MRP :  "6,349",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71BMBNwDWyL.jpg" 
+        },{
+           name : "Women's Summer Sleeveless Ruffle Self Tie Wrap Short Dress",
+           brand : "by Sheine",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AKT",
+           MRP :  "4,119",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/713hcbCqk4L.jpg" 
+        },
+    ]
+
+</script>
+<script src="forAll.js"></script>

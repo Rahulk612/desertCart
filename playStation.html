@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Playstation Consoles Products</title>
+        <link rel="stylesheet" href="innerPage.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- User Account Links -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="useraccount.css">  
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <div class="navcontainer" style="z-index: 999;">
+         <header>
+             <a href="mainPageUser.html"><img class="logo" src="https://cdn.desertcart.com/static/media/logo.5821c90d.png" alt=""></a>
+             <button id="explore">Explore</button>
+             <nav>
+                 <ul class="nav_links">
+                     <li><a class="anchoricon" href="#"><i class="fal fa-globe"></i></a></li>
+                     <li><button class="usericon" id="usericon1"><i class="fal fa-user"></i>
+                         <div id="content"></div>
+                         </button>
+                     </li>
+                     <li><a class="anchoricon" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                 </ul>
+             </nav>
+         </header>
+         <hr>
+       </div>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+               <option value="0">Any delivery time</option>
+               <option value="1"> Same Day </option>
+               <option value="2"> 2 days </option>
+               <option value="4"> 3-5 days </option>
+               <option value="6"> 5-8days </option>
+               <option value="10"> 9-15days</option>
+               <option value="16"> 15+ days </option>
+           </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Playstation Consoles Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "PlayStation 4 Slim 1TB Console",
+           brand : "by PlayStation",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJA",
+           MRP :  " 44,419",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61n-yWHcmSS.jpg" 
+        },{
+           name : "PlayStation 4 Console - 1TB Slim Edition",
+           brand : "by Sony",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJB",
+           MRP :  "74,329",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/715RBdgZtHL.jpg" 
+        },{
+           name : "PlayStation Classic",
+           brand : "by PlayStation",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJC",
+           MRP :  "9,959",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71ogaAK8DGL.jpg" 
+        },{
+           name : "PlayStation 4 Slim 1TB Console - Fortnite Bundle",
+           brand : "by PlayStation",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJD",
+           MRP :  "81,699",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71uPr4KromL.jpg" 
+        },{
+           name : "PlayStation 4 Pro 1TB Limited Edition Console - Death Stranding Bundle",
+           brand : "by PlayStation",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJE",
+           MRP :  "96,369",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71aVLsUrE9L.jpg" 
+        },{
+           name : "Sony PlayStation Classic Console Holiday 20 Games Bonus Bundle",
+           brand : "by Sony",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJF",
+           MRP :  " 12,939",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/714ar9LHOcL.jpg" 
+        },{
+           name : "PlayStation 4 Slim 1TB Console - Marvel's Spider-Man Bundle [Discontinued]",
+           brand : "by PlayStation",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJG",
+           MRP :  "58,629",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/711xGPcLL2L.jpg" 
+        },{
+           name : "Playstation 2 Console - Black (Renewed)",
+           brand : "by Amazon Renewed",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJH",
+           MRP :  "36,909",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81bHi3vo88L.jpg" 
+        },{
+           name : "PlayStation 4 Slim 1TB Solid State Drive Only on PlayStation Console Bundle | Bundle : God of War Game Voucher,Horizon Zero Dawn: Complete Edition Voucher,The Last of Us Remastered Game | Jet Black",
+           brand : "by PlayStation",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJI",
+           MRP :  "101,359",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/51RpSkPbtrL.jpg" 
+        },{
+           name : "Sony PlayStation 3 Slim 320 GB Charcoal Black Console",
+           brand : "by Sony",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJJ",
+           MRP :  "49,419",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/91MhwfzwYnL.jpg" 
+        },{
+           name : "PlayStation 5 DualSense Wireless Controller (UAE Version) - White",
+           brand : "by Sony",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJK",
+           MRP :  "8,849",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61Xe-4DKfOL.jpg" 
+        },{
+           name : "FIFA 21 (PS4) - International Version",
+           brand : "by ",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJL",
+           MRP :  "2,939",   
+           from : "UAe",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/814pNVQVN5L.jpg" 
+        },{
+           name : "Sony Playstation 5 Console Standard Edition",
+           brand : "by Sony",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJM",
+           MRP :  "123,059",   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/51QKZfyi-dL.jpg" 
+        },{
+           name : "Logitech G29 Driving Force Race Wheel for PlayStation 3/4 and PC",
+           brand : "by Logitech",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJN",
+           MRP :  "34,299",   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/61IYYoZ66VL.jpg" 
+        },{
+           name : "SteelSeries Arctis 3 (2019 Edition) All-Platform Gaming Headset for PC, PlayStation 4, Xbox One, Nintendo Switch, VR, Android, and iOS - Black | 61503 (PS4)",
+           brand : "by SteelSeries",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AJO",
+           MRP :  "10,379",   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71Xq4pnsJpL.jpg" 
+        },
+    ]
+
+</script>
+<script src="forAll.js"></script>

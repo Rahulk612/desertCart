@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Baby Needs Shopping Products</title>
+        <link rel="stylesheet" href="innerPage.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- User Account Links -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="useraccount.css">  
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <div class="navcontainer" style="z-index: 999;">
+         <header>
+             <a href="mainPageUser.html"><img class="logo" src="https://cdn.desertcart.com/static/media/logo.5821c90d.png" alt=""></a>
+             <button id="explore">Explore</button>
+             <nav>
+                 <ul class="nav_links">
+                     <li><a class="anchoricon" href="#"><i class="fal fa-globe"></i></a></li>
+                     <li><button class="usericon" id="usericon1"><i class="fal fa-user"></i>
+                         <div id="content"></div>
+                         </button>
+                     </li>
+                     <li><a class="anchoricon" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                 </ul>
+             </nav>
+         </header>
+         <hr>
+       </div>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+               <option value="0">Any delivery time</option>
+               <option value="1"> Same Day </option>
+               <option value="2"> 2 days </option>
+               <option value="4"> 3-5 days </option>
+               <option value="6"> 5-8days </option>
+               <option value="10"> 9-15days</option>
+               <option value="16"> 15+ days </option>
+           </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Baby Needs Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "Baby Wipes, Pampers Sensitive Water Based Baby Diaper Wipes, Hypoallergenic and Unscented, 8 Pop-Top Packs with 4 Refill Packs for Dispenser Tub, 864 Total Wipes (Packaging May Vary)",
+           brand : "by Pampers",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAA",
+           MRP :  "13,398",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71k1Uve-a6L.jpg" 
+        },{
+           name : "Baby Brezza Instant Warmer - Instantly Dispenses Warm Water at Perfect Baby Bottle Temperature - Replaces Traditional Baby Bottle Warmers",
+           brand : "by Baby Brezza",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAB",
+           MRP :  "8,479",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61Nu89KUn6L.jpg" 
+        },{
+           name : "Baby Lounger Baby Nest for Baby Co-Sleeping, Amenpoki 100% Cotton Reversible Infant Lounger Bed, Soft Breathable Newborn Lounger Crib for Napping and Cosleeping, Suitable for 0-12 Months Infant",
+           brand : "by Amenpoki",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAC",
+           MRP :  "8,689",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61Es1U5wcnL.jpg" 
+        },{
+           name : "Philips Avent Natural Baby Bottle, Purple, 9oz, 4pk, SCF013/43",
+           brand : "by Philips Avent",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAD",
+           MRP :  "4,839",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61d336mQFBL.jpg" 
+        },{
+           name : "Little Remedies New Baby Essentials Kit, 6 Piece Kit for Baby's Nose and Tummy",
+           brand : "by Little Remedies",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAE",
+           MRP :  "3,289",   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81XKtAFtMFL.jpg" 
+        },{
+           name : "Blooming Bath Lotus Baby Bath Seat - Premium Baby Bathtub, Fits Most Sinks - Newborn & Baby Essentials - Baby Gifts - 33' - Grey/Dark Grey",
+           brand : "by Blooming Bath",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAF",
+           MRP :  "6,549",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/41kKI9FE8SL.jpg" 
+        },{
+           name : "Elechomes Fast Baby Bottle Warmer for Frozen Breast Milk & Milk Powder, 6-in-1 Baby Food Heater & Steam Sterili-zer with Timer and Safe Auto-shutoff, BPA-Free, Fits Most Brands of Bottles & Jars",
+           brand : "by Elechomes",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAG",
+           MRP :  " 8,339",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61J+GJLAQeS.jpg" 
+        },{
+           name : "Ubbi Steel Odor Locking, No Special Bag Required Money Saving, Awards-Winning, Modern Design, Registry Must-Have Diaper Pail, White",
+           brand : "by Ubbi",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAH",
+           MRP :  "17,889",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/617gsvCja+L.jpg" 
+        },{
+           name : "Vesta Baby Over the Door Hanging Organizer with Hooks - Unisex Space Saving 4 Pocket Storage Solution for Bathroom, Children's Room, Nursery - Clear Window Caddy Hanger - 2 Small Items Utility Pockets",
+           brand : "by Vesta Baby",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAI",
+           MRP :  "5,339",   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81LxNxwDO2L.jpg" 
+        },{
+           name : "WaterWipes Baby Wipes 12x60 Pack Sensitive Newborn Biodegradable Unscented, 99.9% water (720 Wet Wipes)",
+           brand : "by WaterWipes",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAJ",
+           MRP :  "11,879",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/717V-jhAitL.jpg" 
+        },{
+           name : "Munchkin Bounce and Play Baby Door Bouncer (Lenny the Lion)",
+           brand : "by Munchkin",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAK",
+           MRP :  "6,489",   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61r9fS+oC4L.jpg" 
+        },{
+           name : "Door Buddy Baby Proof Door Lock with Adjustable Strap. No Need for Baby Gate. Child Proof Room with Litter Box While Cats Enter Easily. Installs in Seconds and is Simple & Convenient to Use. (Grey)",
+           brand : "by Door Buddy",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAL",
+           MRP :  "3,369",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81W6EIr80LL.jpg" 
+        },{
+           name : "Hatch Baby Rest Sound Machine, Night Light and Time-to-Rise (UK-Only Compatible)",
+           brand : "by Hatch Baby",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAM",
+           MRP :  "12,819",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/412wLAYXWtL.jpg" 
+        },{
+           name : "Baby Monitor, KAMEP Video Baby Monitor with Camera and Night Vision, Two-Way Audio, Temperature Display, Lullabies, Power Saving Mode, 3.2'' Screen, No Need Wifi/APP",
+           brand : "by KAMEP",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAN",
+           MRP :  "20,369",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/51SPTA4-mML.jpg" 
+        },{
+           name : "Tommee Tippee Complete Feeding Set, Super-Steam Electric Steriliser, Baby Bottle and Food Warmer, Baby Bottles and Accessories, White",
+           brand : "by Tommee Tippee",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAO",
+           MRP :  "15,339",   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71hIK5fqbWL.jpg" 
+        },{
+           name : "Sweet Dreamers, Ewan Deluxe with Shush - Washable Baby Sleep Aid with Cry Sensor",
+           brand : "by Sweet Dreamers",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAP",
+           MRP :  "8,489",   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71xoelHnD3L.jpg" 
+        },{
+           name : "Shynerk SH-M-02 Baby car mirror",
+           brand : "by Shynerk",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAQ",
+           MRP :  "2,959",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61xyCroSLEL.jpg" 
+        },{
+           name : "Munchkin Brica Fold N' Go Travel Bassinet, Grey",
+           brand : "by Munchkin",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAR",
+           MRP :  "7,979",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/91oGVLChqFL.jpg" 
+        },{
+           name : "Graco DuoGlider Double Stroller | Lightweight Double Stroller with Tandem Seating, Glacier",
+           brand : "by Graco DuoGlider",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAS",
+           MRP :  "33,839",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/91dwoBmSshL.jpg" 
+        },{
+           name : "Aquaphor Baby Healing Ointment - for Chapped Skin, Diaper Rash and Minor Scratches - 7 Ounce (Pack of 1)",
+           brand : "by Aquaphor",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AAT",
+           MRP :  "1,669",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71Hsq2i9-eL.jpg" 
+        },
+    ]
+</script>
+<script src="forAll.js"></script>

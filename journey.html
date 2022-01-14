@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Hiking Shopping Products</title>
+        <link rel="stylesheet" href="innerPage.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- User Account Links -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="useraccount.css">  
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <div class="navcontainer" style="z-index: 999;">
+         <header>
+             <a href="mainPageUser.html"><img class="logo" src="https://cdn.desertcart.com/static/media/logo.5821c90d.png" alt=""></a>
+             <button id="explore">Explore</button>
+             <nav>
+                 <ul class="nav_links">
+                     <li><a class="anchoricon" href="#"><i class="fal fa-globe"></i></a></li>
+                     <li><button class="usericon" id="usericon1"><i class="fal fa-user"></i>
+                         <div id="content"></div>
+                         </button>
+                     </li>
+                     <li><a class="anchoricon" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                 </ul>
+             </nav>
+         </header>
+         <hr>
+       </div>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+               <option value="0">Any delivery time</option>
+               <option value="1"> Same Day </option>
+               <option value="2"> 2 days </option>
+               <option value="4"> 3-5 days </option>
+               <option value="6"> 5-8days </option>
+               <option value="10"> 9-15days</option>
+               <option value="16"> 15+ days </option>
+           </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Hiking Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "TrailBuddy Collapsible Hiking Poles - Pack of 2 Trekking Poles for Hiking, Camping & Backpacking - Lightweight, Adjustable Aluminum Walking Sticks w/ Cork Grip",
+           brand : "by TrailBuddy",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGA",
+           MRP :  "8,889",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81YdeQbVdXL.jpg" 
+        },{
+           name : "Columbia Women's Newton Ridge Lightweight Waterproof Shoe Hiking Boot",
+           brand : "by Columbia",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGB",
+           MRP :  "19,729",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81uOpTEYjQL.jpg" 
+        },{
+           name : 'Cascade Mountain Tech Trekking Poles - Aluminum Hiking Walking Sticks with Adjustable Locks Expandable to 54" (Set of 2)',
+           brand : "by Cascade",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGC",
+           MRP :  "4,969",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71Leic953AL.jpg" 
+        },{
+           name : "Columbia Women's Newton Ridge Plus Hiking Boot",
+           brand : "by Columbia",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGD",
+           MRP :  "21,399",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/715RagZ-qjS.jpg" 
+        },{
+           name : "Venture Pal 40L Lightweight Packable Travel Hiking Backpack Daypack",
+           brand : "by Venture",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGE",
+           MRP :  "4,489",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81keZ0t9wKL.jpg" 
+        },{
+           name : "Merrell Men's Moab 2 Vent Hiking Shoe",
+           brand : "by Merrell",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGF",
+           MRP :  "17,799",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81m9GyEmoRL.jpg" 
+        },{
+           name : "TETON Sports Explorer 4000 Internal Frame Backpack; High-Performance Backpack for Backpacking, Hiking, Camping",
+           brand : "by TETON Sports",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGG",
+           MRP :  "43,199",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81yzHUtG39L.jpg" 
+        },{
+           name : "Osprey Ultralight Stuff Pack",
+           brand : "by Osprey",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGH",
+           MRP :  "5,709",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71pZLW-ncAL.jpg" 
+        },{
+           name : "KEEN Men's Targhee III Waterproof Leather Hiking Shoe",
+           brand : "by KEEN",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGI",
+           MRP :  " 27,109",   
+           from : "inida",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4, 
+           image: "https://images-na.ssl-images-amazon.com/images/I/81J1LBsj6fL.SS150.jpg" 
+        },{
+           name : "TETON Sports Oasis 1100 Hydration Pack; 2-Liter Hydration Backpack with Water Bladder; For Backpacking, Biking, Hiking, Running, Cycling, and Climbing; Orange",
+           brand : "by TETON",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGJ",
+           MRP :  "7,609",   
+           from : "inida",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/8159jH8qFSL.jpg" 
+        },{
+           name : "Women's Hiking Walking Socks, FEIDEER Multi-pack Outdoor Recreation Socks Wicking Cushion Crew Socks",
+           brand : "by Fedrer",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGK",
+           MRP :  "5,349",   
+           from : "inida",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/81fIfbpddQL.jpg" 
+        },{
+           name : "EVERLIT 250 Pieces Survival First Aid Kit IFAK Molle System Compatible Outdoor Gear Emergency Kits Trauma Bag for Camping Boat Hunting Hiking Home Car Earthquake and Adventures",
+           brand : "by EVERLIT",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGL",
+           MRP :  " 8,099",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/91itEPg0oPL.jpg" 
+        },{
+           name : "Surviveware Small First Aid Kit with Labelled Compartments for Hiking, Backpacking, Camping, Travel, Car and Cycling",
+           brand : "by Surviveware",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGM",
+           MRP :  "7,039",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/91QrPtq-ceL.jpg" 
+        },{
+           name : "TETON Sports Scout 3400 Internal Frame Backpack; High-Performance Backpack for Backpacking, Hiking, Camping",
+           brand : "by TETON",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGN",
+           MRP :  "23,309",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/81xQSEZPiqL.jpg" 
+        },{
+           name : "Find history and culture under the Hill of Seven Colors in northwest Argentina",
+           brand : "by Argentina",
+           rating : 4.7 ,
+           qty : 1,
+           code : "AGO",
+           MRP :  "231,199",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71fS5uYCyQL.jpg" 
+        },
+    ]
+
+
+    
+
+</script>
+<script src="forAll.js"></script>
